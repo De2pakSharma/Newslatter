@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Subscribing Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      #myAlert {
+        display: none;
+      }
+      #myAlert:target {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <div class="container mt-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title mb-4">Subscibe Form</h3>
+
+          <form action="#myAlert" method="get">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="country" class="form-label">Subscribe Plan</label>
+              <select class="form-select" id="country" name="country" required>
+                <option value="">Plan...</option>
+                <option value="Monthly">20$/Monthly</option>
+                <option value="Year">190$/Year</option>
+                <option value="2year">350$/2Year</option>
+              </select>
+            </div>
+            <button type="reset" class="btn btn-danger">Clear</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div id="myAlert" class="alert alert-success mt-3">
+              Thank you for subscribing!
+              <br />
+              <a href="#" class="btn btn-sm btn-outline-dark mt-2">Close</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
